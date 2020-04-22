@@ -1,0 +1,41 @@
+.header {
+  padding: 0 30px;
+  width: 100%;
+  background-color: #2f2f30;
+  position: fixed;
+  height: 100px;
+  margin-bottom: 80px;
+  box-shadow: 0 10px 19px -8px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-title-wrapper {
+    flex: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+    h3 {
+      font-weight: 800;
+      font-size: 36px;
+      color: #f2bd1e;
+    }
+
+    p {
+      font-style: italic;
+      font-size: 18px;
+    }
+  }
+
+  .navigation {
+    flex: 6;
+
+    ::ng-deep {
+      .mat-button {
+        color: white;
+      }
+    }
+  }
+}
