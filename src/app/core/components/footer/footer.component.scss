@@ -1,0 +1,33 @@
+footer {
+  width: 100%;
+  min-height: 250px;
+  background-color: #f2bd1e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .contact-info {
+    max-width: 300px;
+
+    p,
+    a {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+  }
+
+  .about-info {
+    max-width: 300px;
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    p {
+      margin-top: 12px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+}

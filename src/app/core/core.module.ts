@@ -7,11 +7,18 @@ import { PortalModule } from '@angular/cdk/portal';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { MainPageComponent } from './pages/main-page/main-page.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, MainPageComponent],
-  imports: [CommonModule, MatMenuModule, MatButtonModule, PortalModule, BrowserAnimationsModule],
+  declarations: [HeaderComponent, FooterComponent, HomeComponent],
+  imports: [
+    CommonModule,
+    MatMenuModule,
+    MatButtonModule,
+    PortalModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+  ],
   exports: [
     HeaderComponent,
     FooterComponent,
@@ -19,6 +26,7 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
     MatButtonModule,
     PortalModule,
     BrowserAnimationsModule,
+    MatMenuModule,
   ],
 })
 export class CoreModule {}

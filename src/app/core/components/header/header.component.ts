@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavItem } from '../../models/navigation-item';
 
 @Component({
   selector: 'app-header',
@@ -6,27 +7,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  catalog = [
+  catalogSubItems: NavItem[] = [
     {
-      name: 'Volkswagen B7',
-      subMenu: ['2015', '2016', '2017', '2018', '2019', '2020'],
+      displayName: 'Volkswagen B7',
+      route: '/catalog/b7',
+      disabled: true,
     },
-  ];
-
-  // navigationItems = ['Каталог', 'Авто з США', 'Послуги', 'Блог', 'Про нас', 'Контакти', 'FAQ'];
-  navigationItems = [
     {
-      name: 'Каталог',
-      subMenu: [
-        {
-          name: 'Volkswagen B8',
-          subMenu: ['2015', '2016', '2017', '2018', '2019', '2020'],
-        },
-      ],
+      displayName: 'Volkswagen B8',
+      route: '/catalog/b7',
+      disabled: true,
+    },
+    {
+      displayName: 'Volkswagen Jetta',
+      route: '/catalog/jetta',
+      disabled: true,
     },
   ];
 
   constructor() {}
 
   ngOnInit() {}
+
+  scrollToFooter() {
+    window.scrollTo({
+      behavior: 'smooth',
+      top: window.innerHeight,
+    });
+  }
 }
